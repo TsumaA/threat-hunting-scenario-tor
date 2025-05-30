@@ -38,7 +38,8 @@ DeviceFileEvents
 | order by Timestamp desc  
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/71402e84-8767-44f8-908c-1805be31122d">
+<![First tor screenshot](https://github.com/user-attachments/assets/ab859b52-931b-4067-b552-08dcc68229f2)
+>
 
 ---
 
