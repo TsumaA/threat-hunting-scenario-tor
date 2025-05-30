@@ -74,7 +74,8 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine  
 | order by Timestamp desc
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b13707ae-8c2d-4081-a381-2b521d3a0d8f">
+![Tor Screenshot #3](https://github.com/user-attachments/assets/e6c7bb7b-d7e0-45df-b202-bfcdfdfdfeb9)
+>
 
 ---
 
