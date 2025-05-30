@@ -101,50 +101,45 @@ DeviceNetworkEvents
 
 ## Chronological Event Timeline 
 
-### 1. File Download - TOR Installer
-
-- **Timestamp:** `2024-11-08T22:14:48.6065231Z`
-- **Event:** The user "labuser" downloaded a file named `tor-browser-windows-x86_64-portable-14.0.1.exe` to the Downloads folder.
-- **Action:** File download detected.
-- **File Path:** `C:\Users\employee\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
+### 1. File Preparation - TOR Installer
+- **Timestamp:** `2025-05-28T19:39:07Z`
+- **Event:** The user "labuser" on device "abe-mde-est" prepared a TOR browser installer file `tor-browser-windows-x86_64-portable-14.5.3.exe` by renaming/moving it to the Downloads folder.
+- **Action:** File operation detected.
+- **File Path:** `Downloads\tor-browser-windows-x86_64-portable-14.5.3.exe`
 
 ### 2. Process Execution - TOR Browser Installation
-
-- **Timestamp:** `2024-11-08T22:16:47.4484567Z`
-- **Event:** The user "labuser" executed the file `tor-browser-windows-x86_64-portable-14.0.1.exe` in silent mode, initiating a background installation of the TOR Browser.
+- **Timestamp:** `2025-05-28T20:19:31Z`
+- **Event:** The user "labuser" executed the file `tor-browser-windows-x86_64-portable-14.5.3.exe` in silent mode, initiating a background installation of the TOR Browser on device "abe-mde-est".
 - **Action:** Process creation detected.
-- **Command:** `tor-browser-windows-x86_64-portable-14.0.1.exe /S`
-- **File Path:** `C:\Users\employee\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
+- **Command:** `tor-browser-windows-x86_64-portable-14.5.3.exe /S`
+- **SHA256:** `3b7e78a4ccc935cfe71a0e4d41cc297d48a44e722b4a46f73b5562aed9c1d2ea`
 
 ### 3. Process Execution - TOR Browser Launch
-
-- **Timestamp:** `2024-11-08T22:17:21.6357935Z`
-- **Event:** User "labuser" opened the TOR browser. Subsequent processes associated with TOR browser, such as `firefox.exe` and `tor.exe`, were also created, indicating that the browser launched successfully.
+- **Timestamp:** `2025-05-28T20:20:20Z`
+- **Event:** User "labuser" opened the TOR browser on device "abe-mde-est". Multiple `firefox.exe` processes and the core TOR daemon `tor.exe` were created, indicating that the browser launched successfully.
 - **Action:** Process creation of TOR browser-related executables detected.
-- **File Path:** `C:\Users\employee\Desktop\Tor Browser\Browser\TorBrowser\Tor\tor.exe`
+- **File Path:** `tor.exe` and `firefox.exe` (multiple instances)
 
 ### 4. Network Connection - TOR Network
-
-- **Timestamp:** `2024-11-08T22:18:01.1246358Z`
-- **Event:** A network connection to IP `176.198.159.33` on port `9001` by user "labuser" was established using `tor.exe`, confirming TOR browser network activity.
+- **Timestamp:** `2025-05-28T20:22:14Z`
+- **Event:** A network connection to IP `144.76.223.174` on port `9001` by user "labuser" was established using `tor.exe` on device "abe-mde-est", confirming TOR browser network activity.
 - **Action:** Connection success.
 - **Process:** `tor.exe`
-- **File Path:** `c:\users\employee\desktop\tor browser\browser\torbrowser\tor\tor.exe`
+- **File Path:** `tor.exe`
 
 ### 5. Additional Network Connections - TOR Browser Activity
-
 - **Timestamps:**
-  - `2024-11-08T22:18:08Z` - Connected to `194.164.169.85` on port `443`.
-  - `2024-11-08T22:18:16Z` - Local connection to `127.0.0.1` on port `9150`.
-- **Event:** Additional TOR network connections were established, indicating ongoing activity by user "labuser" through the TOR browser.
+  - `2025-05-28T20:22:33Z` - SOCKS proxy connections to `127.0.0.1:9150`
+  - `2025-05-28T20:22:47Z` - Connected to `107.189.10.143:9001`
+  - `2025-05-28T20:27:04Z` - Connected to `198.96.155.3:9001` and `89.58.28.75:9001`
+- **Event:** Additional TOR network connections were established by user "labuser" on device "abe-mde-est", indicating ongoing activity through the TOR browser and circuit establishment through multiple relay nodes.
 - **Action:** Multiple successful connections detected.
 
 ### 6. File Creation - TOR Shopping List
-
-- **Timestamp:** `2024-11-08T22:27:19.7259964Z`
-- **Event:** The user "labuser" created a file named `tor-shopping-list.txt` on the desktop, potentially indicating a list or notes related to their TOR browser activities.
+- **Timestamp:** `2025-05-28T20:21:42Z`
+- **Event:** The user "labuser" created a file named `tor-shopping-list.txt` on the desktop of device "abe-mde-est" during active browsing session, potentially indicating dark web marketplace activity.
 - **Action:** File creation detected.
-- **File Path:** `C:\Users\employee\Desktop\tor-shopping-list.txt`
+- **File Path:** `Desktop\tor-shopping-list.txt`
 
 ---
 
@@ -156,6 +151,6 @@ The user "labuser" on the "abe-mde-est" device initiated and completed the insta
 
 ## Response Taken
 
-TOR usage was confirmed on the endpoint `abe-mde-est` by the user `employee`. The device was isolated, and the user's direct manager was notified.
+TOR usage was confirmed on the endpoint `abe-mde-est` by the user `labuser`. The device was isolated, and the user's direct manager was notified.
 
 ---
